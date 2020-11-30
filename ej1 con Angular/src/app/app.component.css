@@ -1,0 +1,24 @@
+.col-6{
+    margin-top: 40px;
+}
+#columnaDerecha{
+    background-color: #bbc8e6;
+    margin-right: 40%;
+    
+}
+.row{
+    margin: 0;
+}
+#columnaIzquierda{
+    background-color: #bbbcde;
+    height: 100px;
+    
+}
+input{
+    margin: 2px;
+    margin-top: 30px;
+}
+
+
+
+

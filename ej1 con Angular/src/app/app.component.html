@@ -1,0 +1,33 @@
+<div class="container">
+  <h1>¡Hola Simplicita desde Angular 10!</h1>
+  <div class="row">
+    <div class="container col-6" id="columnaIzquierda">
+
+      <form [formGroup]="form">
+        <input type="text" 
+        class="form-control"
+        placeholder="¡Escribe aqui!" 
+        formControlName="searchField"
+        [ngClass]="{'is-invalid': form.get('searchField').touched && !form.get('searchField').valid }"/>
+        <span class="invalid-feedback">
+          ¡recuerda escribir algo!
+        </span>                                        
+        <button class="btn btn-info"  [disabled]="!form.get('searchField').value" (click)="get()">Buscar</button>
+        <br>
+        <p>buscando por {{form.get("searchField").value}}</p>
+      </form>  
+    </div>
+
+    <div class="container col-6">
+      <div  *ngFor="let el of keysArray" id="columnaDerecha">
+        {{el}}:{{valueKeys}}
+        <br>
+      </div>
+        
+    </div>
+
+  </div>
+</div>
+
+<!-- I'm using bootstrap classes and reactive form approach -->
+
